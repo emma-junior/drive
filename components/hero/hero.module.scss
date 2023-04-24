@@ -1,0 +1,21 @@
+.hero {
+    padding-top: 60px;
+    &_p {
+        width: 600px;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px;
+    }
+    &_drive {
+        font-size: 700px;
+        font-weight: 700;
+        font-family: 'Bebas Neue', cursive;
+        line-height: 70%;
+        background-image: url(/images/city.jpg);
+        background-size: cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        padding-top: 70px;
+    }
+}
