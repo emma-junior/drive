@@ -1,0 +1,18 @@
+.loader {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    .progress {
+        width: 129.6px;
+        height: 21.6px;
+        background: linear-gradient(#2721F2 0 0) left/0% 100% no-repeat #dbdcef;
+        animation: progress-jgv380 2.8s infinite linear;
+    }
+    
+    @keyframes progress-jgv380 {
+        100% {
+            background-size: 100% 100%;
+        }
+    }
+}
