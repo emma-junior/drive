@@ -1,9 +1,12 @@
+import React, { ReactElement } from "react";
 import Head from 'next/head'
 import Navbar from '../components/navbar/Navbar'
 import Hero from '../components/hero/Hero'
+import useAnimation from "../animations";
 
 
-export default function Home() {
+export default function Home():ReactElement {
+  const { app } = useAnimation();
   return (
     <>
       <Head>
@@ -12,7 +15,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main ref={app}>
         <Navbar />
         <Hero />
       </main>

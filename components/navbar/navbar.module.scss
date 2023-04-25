@@ -1,0 +1,7 @@
+.navbar {
+    &_logo {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: all 1.5s;
+        transform: translateY(-3em);
+    }
+}
