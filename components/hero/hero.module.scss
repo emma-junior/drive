@@ -6,7 +6,6 @@
         font-weight: 700;
         line-height: 40px;
         clip-path: polygon(0 0, 51% 0, 100% 0);
-        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
     &_drive {        
         background-image: url(/images/city.jpg);
@@ -22,6 +21,37 @@
             font-weight: 700;
             font-family: 'Bebas Neue', cursive;
             line-height: 70%;
+        }
+    }
+    &_slides {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        height: 25px;
+        &_wrapper {
+            display: flex;
+            width: 200%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            animation: marquee 20s linear infinite;
+            white-space: nowrap;
+
+            @keyframes marquee {
+                0% {
+                    left: 100%;
+                }
+            
+                100% {
+                    left: -100%;
+                }
+            }
+            span {
+                padding: 0 25px;
+                font-size: 13px;
+                letter-spacing: 1px;
+            }
         }
     }
 }
