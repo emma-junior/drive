@@ -1,0 +1,53 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+.story {
+    padding: 10px 0;
+    &_images {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+        justify-content: center;
+
+        &_one, &_three {
+            width: 410px;
+            height: 300px;
+        }
+        &_two {
+            width: 410px;
+            height: 450px;
+        }
+    }
+    &_content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 70px;
+
+        &_header {
+            width: 32%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 30px;
+            border-bottom: 2px solid $col-primary;
+
+            button {
+                font-size: 13px;
+                color: $col-primary;
+                border: 1px solid $col-primary;
+                border-radius: 20px;
+                background: transparent;
+                cursor: pointer;
+                @include center (140px, 35px)
+                
+            }
+        }
+        &_p {
+            width: 65%;
+            letter-spacing: 1px;
+            font-size: 18px;
+            line-height: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid $col-primary;
+        }
+    }
+}

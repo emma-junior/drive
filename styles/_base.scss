@@ -17,8 +17,26 @@ body {
         display: none;
     }
 }
-
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
 .char {
     transform: translateY(115px);
     transition: transform .5s;
+}
+
+figure {
+    overflow: hidden;
+
+    img {
+        width: 0px;
+        height: 0px;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        max-height: 100%;
+    }
 }

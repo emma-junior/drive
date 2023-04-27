@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Navbar from '../components/navbar/Navbar'
 import Hero from '../components/hero/Hero'
 import Loader from "../components/loading/Loader";
+import Story from "../components/story/Story";
 
 
 export default function Home():ReactElement {
@@ -30,6 +31,7 @@ export default function Home():ReactElement {
             <>
             <Navbar />
             <Hero />
+            <Story />
             </>
           )
         }
