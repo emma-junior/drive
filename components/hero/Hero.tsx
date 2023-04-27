@@ -8,7 +8,9 @@ const Hero = ():ReactElement => {
   
   return (
     <section ref={app}  className={styles.hero}>
-        <p className={`herotext ${styles.hero_p}`}>GREATNESS&nbsp;IS&nbsp;IN&nbsp;OUR&nbsp;BACKYARD</p>
+        <div className={styles.hero_text}>
+          <div className={`text ${styles.hero_text_p}`}>GREATNESS&nbsp;IS&nbsp;IN&nbsp;OUR&nbsp;BACKYARD</div>
+        </div>
         <div className={`drive ${styles.hero_drive}`}><p >DRIVE</p></div>
         <div className={styles.hero_slides}>
           <div className={styles.hero_slides_wrapper}>
@@ -16,7 +18,7 @@ const Hero = ():ReactElement => {
                 const arr = [];
                 for (let i = 0; i < 2; i++) {
                     arr.push(
-                        <div className="">
+                        <div key={i} className="">
                             <span>CAPITAL THAT COMES TO YOU</span>
                             <span>MSP</span>
                             <span>TRUE PARTNERS</span>

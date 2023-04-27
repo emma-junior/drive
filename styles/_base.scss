@@ -12,10 +12,14 @@ body {
     background: $col-background;
     color: $col-primary;
     padding: 25px;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100%;
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
+    // &::-webkit-scrollbar {
+    //     display: none;
+    // }
 }
 a {
     text-decoration: none;
@@ -29,9 +33,11 @@ li {
 }
 
 figure {
+    width: 100%;
     overflow: hidden;
 
     img {
+        overflow: hidden;
         width: 0px;
         height: 0px;
         min-width: 100%;

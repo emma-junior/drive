@@ -11,10 +11,12 @@
         &_one, &_three {
             width: 410px;
             height: 300px;
+            transition: all 2s;
         }
         &_two {
             width: 410px;
             height: 450px;
+            transition: all 2s;
         }
     }
     &_content {
@@ -29,6 +31,9 @@
             justify-content: space-between;
             padding-bottom: 30px;
             border-bottom: 2px solid $col-primary;
+            h2{
+                clip-path: polygon(0 0, 51% 0, 100% 0);
+            }
 
             button {
                 font-size: 13px;
@@ -48,6 +53,7 @@
             line-height: 30px;
             padding-bottom: 30px;
             border-bottom: 2px solid $col-primary;
+            transition: all 2s;
         }
     }
 }
