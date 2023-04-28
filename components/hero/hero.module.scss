@@ -1,5 +1,11 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
 .hero {
     padding-top: 60px;
+    @include respondMax("tablet") {
+        padding-top: 70px;
+    }
     &_text {
         width: 95%;
         margin: 0 auto;
@@ -9,6 +15,16 @@
             font-weight: 700;
             line-height: 40px;
             clip-path: polygon(0 0, 51% 0, 100% 0);
+            @include respondMax("tablet") {
+                font-size: 35px;
+                width: 70%;
+                line-height: 35px;           
+            }
+            @include respondMax("mobile") {
+                font-size: 25px;
+                width: 70%;
+                line-height: 25px;
+            }
         }
     }
     &_drive {        
@@ -18,15 +34,29 @@
         -webkit-background-clip: text;
         color: transparent;
         padding-top: 70px;
-        width: 95%;
+        overflow: hidden;
         clip-path: polygon(0 0, 51% 0, 100% 0);
-        margin: 0 auto;
+        @include center (95%, 100%);
+        @include respondMax("tablet") {
+            @include center (100%, 300px);
+        }
+        @include respondMax("mobile") {
+            @include center (100%, 190px);
+        }
 
         p {
             font-size: 700px;
             font-weight: 700;
             font-family: 'Bebas Neue', cursive;
             line-height: 70%;
+            @include respondMax("tablet") {
+                font-size: 370px;
+            }
+            @include respondMax("mobile"){
+                font-size: 190px;
+                line-height: 40%;
+
+            }
         }
     }
     &_slides {

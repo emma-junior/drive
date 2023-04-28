@@ -16,7 +16,9 @@ body {
     overflow-x: hidden;
     width: 100%;
     min-height: 100%;
-
+    @include respondMax("tablet") {
+        padding: 10px;
+    }
     // &::-webkit-scrollbar {
     //     display: none;
     // }

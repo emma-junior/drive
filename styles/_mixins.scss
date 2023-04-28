@@ -6,3 +6,38 @@
     width: $width;
     height: $height;
 }
+
+// breakpoints
+$breakpoints: (
+    "mobile": 600px,
+    "tablet": 900px,
+    "lg-tablet": 920px,
+    "sm-desktop": 1125px,
+    "desktop": 1366px,
+    ) !default;
+
+@mixin respondMin($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        +"Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@mixin respondMax($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        +"Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
