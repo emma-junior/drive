@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.countries {
+    padding: 70px 0;
+
+    &_container {
+        @include center (100%, 100%);
+
+        h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 90px;
+            font-weight: 700;
+            line-height: 80px;
+        }
+        &_slide {
+            background: $col-secondary;
+            @include center (100%, 100px);
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+            @include respondMax("tablet") {               
+                white-space: nowrap;
+            }
+            h1 {
+                font-size: 100px;
+                animation: move 10s linear infinite;
+            }
+            @keyframes move {
+                0% {
+                    transform: translateX(100px);
+                    @include respondMax("tablet") {
+                        transform: translateX(-500px);
+                    }
+                }
+        
+                50% {
+                    transform: translateX(-100px);
+                    @include respondMax("tablet") {
+                        transform: translateX(300px);
+                    }
+                }
+        
+                100% {
+                    transform: translateX(100px);
+                    @include respondMax("tablet") {
+                        transform: translateX(-500px);
+                    }
+                }
+            }
+        }
+        &_more {
+            color: $col-secondary;
+        }
+    }
+}
