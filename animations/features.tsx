@@ -14,11 +14,56 @@ const useAnimationTwo= () => {
 
 
     let ctx = gsap.context(() => {
-        tl.current = gsap.timeline({
-            scrollTrigger: {trigger: ".featuresone", start: "top bottom"}
+
+        ScrollTrigger.matchMedia({
+            "(max-width: 768px)": function() {
+    
+                let mobileTL = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".featuresone",
+                        start: "top bottom",
+                    }
+                });
+                mobileTL.from(".featuresone", {scale:0, opacity: 0},)
+                .to(".featuresone", { scale:1, x: 0, opacity: 1})
+            },
+            "(min-width: 769px)": function() {
+                let desktopTL = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".featuresone",
+                        start: "top bottom",
+                    }
+                });
+                desktopTL.from(".featuresone", {x: -200, opacity: 0},)
+                .to(".featuresone", {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', scale:1, x: 0, opacity: 1})
+            }
         })
-        .from(".featuresone", {x: -200, opacity: 0},)
-        .to(".featuresone", {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', x: 0, opacity: 1})
+
+        ScrollTrigger.matchMedia({
+            "(max-width: 768px)": function() {
+    
+                let mobileTL = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".featuresthree",
+                        start: "top bottom",
+                    }
+                });
+                mobileTL.from(".featuresthree", {scale:0, opacity: 0},)
+                .to(".featuresthree", { scale:1, x: 0, opacity: 1})
+            },
+            "(min-width: 769px)": function() {
+                let desktopTL = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".featuresone",
+                        start: "top bottom",
+                    }
+                });
+                desktopTL.from(".featuresthree", {x: 200, opacity: 0},)
+                .to(".featuresthree", {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', x: 0, opacity: 1},"-=0.5")
+            }
+        })
+
+    
         tl.current = gsap.timeline({
             scrollTrigger: {trigger: ".featurestwo", start: "top bottom"}
         })
@@ -27,8 +72,6 @@ const useAnimationTwo= () => {
         tl.current = gsap.timeline({
             scrollTrigger: {trigger: ".featuresthree", start: "top bottom"}
         })
-        .from(".featuresthree", {x: 200, opacity: 0},)
-        .to(".featuresthree", {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', x: 0, opacity: 1})
         .to(".topic", { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' },)
         .to(".char", { y: 0, stagger: 0.05, opacity: 1, delay:0.2, duration: .1 },)
         .from(".info", {y:100, opacity: 0},)

@@ -27,7 +27,8 @@
             @include respondMax("mobile") {
                 width: 95vw;
                 height: 240px;
-                clip-path: polygon(0 0, 51% 0, 100% 0);
+                opacity: 0;
+                // clip-path: polygon(0 0, 51% 0, 100% 0);
                 
             }
         }
