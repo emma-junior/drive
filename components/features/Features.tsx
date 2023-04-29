@@ -23,7 +23,7 @@ const Story = ({details}:Props):ReactElement => {
         </div>
         <div className={` ${styles.features_content}`}>
             <div className={styles.features_content_header}>
-                <h2 className={`topic`}>{details.title}</h2>
+                <h2>{details.title}</h2>
                 <button>{details.link}</button>
             </div>
             <p className={`info ${styles.features_content_p}`}>&emsp;&emsp;&emsp;&emsp;&emsp; {details.info}</p>

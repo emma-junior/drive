@@ -10,8 +10,6 @@ const useAnimationTwo= () => {
   const tl = useRef<GSAPTimeline>()
   
   useEffect(() => {
-    let featuretext = SplitType.create('.topic')
-
 
     let ctx = gsap.context(() => {
 
@@ -59,7 +57,7 @@ const useAnimationTwo= () => {
                     }
                 });
                 desktopTL.from(".featuresthree", {x: 200, opacity: 0},)
-                .to(".featuresthree", {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', x: 0, opacity: 1},"-=0.5")
+                .to(".featuresthree", {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', x: 0, opacity: 1},)
             }
         })
 
@@ -72,8 +70,6 @@ const useAnimationTwo= () => {
         tl.current = gsap.timeline({
             scrollTrigger: {trigger: ".featuresthree", start: "top bottom"}
         })
-        .to(".topic", { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' },)
-        .to(".char", { y: 0, stagger: 0.05, opacity: 1, delay:0.2, duration: .1 },)
         .from(".info", {y:100, opacity: 0},)
         .to(".info", {y:0, opacity: 1},)
 

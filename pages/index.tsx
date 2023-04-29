@@ -4,7 +4,7 @@ import Navbar from '../components/navbar/Navbar'
 import Hero from '../components/hero/Hero'
 import Loader from "../components/loading/Loader";
 import Features from "../components/features/Features";
-import { story } from "../data";
+import { story, team } from "../data";
 import Countries from "../components/countries/Countries";
 
 
@@ -35,6 +35,7 @@ export default function Home():ReactElement {
             <Hero />
             <Features details={story} />
             <Countries />
+            <Features details={team} />
             </>
           )
         }
