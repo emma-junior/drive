@@ -6,6 +6,12 @@ export interface storyType {
     link: string,
     info: string
 }
+export interface portfolioType {
+    title: string,
+    link: string,
+    info: string
+}
+
 
 export const story:storyType = {
     imageOne: "storyone.jpg",
@@ -23,4 +29,10 @@ export const team:storyType = {
     title: "OUR TEAM",
     link: "VIEW OUR TEAM",
     info: "We're a diverse and collaborative team from unlikely backgrounds. We love a challenge, and we invest on behalf of our Limited Partners who believe that, with the right partners and a relentless work ethic, entrepreneurs can build market-defining companies anywhere."
+}
+
+export const portfolio:portfolioType = {
+    title: "OUR PORTFOLIO",
+    link: "VIEW OUR PORTFOLIO",
+    info: "Our companies are proving that you can build a world-class technology company anywhere. We believe the best advantages are the ones you already have. Build where your talent is. Build where your companies are. Build where you're strongest."
 }

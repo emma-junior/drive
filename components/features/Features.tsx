@@ -2,6 +2,7 @@ import React,{ReactElement} from 'react'
 import styles from "./features.module.scss"
 import { storyType } from '../../data';
 import useAnimationTwo from '../../animations/features';
+import Button from '../button/Button';
 
 interface Props {
     details: storyType;    
@@ -24,7 +25,7 @@ const Story = ({details}:Props):ReactElement => {
         <div className={` ${styles.features_content}`}>
             <div className={styles.features_content_header}>
                 <h2>{details.title}</h2>
-                <button>{details.link}</button>
+                <Button word={details.link} />
             </div>
             <p className={`info ${styles.features_content_p}`}>&emsp;&emsp;&emsp;&emsp;&emsp; {details.info}</p>
         </div>

@@ -28,7 +28,6 @@
                 width: 95vw;
                 height: 240px;
                 opacity: 0;
-                // clip-path: polygon(0 0, 51% 0, 100% 0);
                 
             }
         }
@@ -66,20 +65,7 @@
                 flex-direction: row;
                 width: 95%;
             }
-            // h2{
-            //     clip-path: polygon(0 0, 51% 0, 100% 0);
-            // }
 
-            button {
-                font-size: 13px;
-                color: $col-primary;
-                border: 1px solid $col-primary;
-                border-radius: 20px;
-                background: transparent;
-                cursor: pointer;
-                @include center (140px, 35px)
-                
-            }
         }
         &_p {
             width: 65%;

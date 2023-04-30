@@ -6,6 +6,7 @@ import Loader from "../components/loading/Loader";
 import Features from "../components/features/Features";
 import { story, team } from "../data";
 import Countries from "../components/countries/Countries";
+import Portfolio from "../components/portfolio/Portfolio";
 
 
 export default function Home():ReactElement {
@@ -36,6 +37,7 @@ export default function Home():ReactElement {
             <Features details={story} />
             <Countries />
             <Features details={team} />
+            <Portfolio />
             </>
           )
         }

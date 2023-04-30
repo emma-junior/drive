@@ -1,0 +1,12 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.btn {
+    font-size: 13px;
+    color: $col-primary;
+    border: 1px solid $col-primary;
+    border-radius: 20px;
+    background: transparent;
+    padding: 10px 15px;
+    cursor: pointer;
+}

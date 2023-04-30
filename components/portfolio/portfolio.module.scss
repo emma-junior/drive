@@ -1,0 +1,110 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+.portfolio {
+    padding: 20px 0;
+
+    
+
+    &_header {
+        display: grid;
+        grid-template-columns: repeat(3, 32%);
+        gap: 15px;
+        letter-spacing: 1px;
+        
+        @include respondMax("tablet") {
+            gap: 5px;
+        }
+        
+        @include respondMax("mobile") {
+            grid-template-columns: auto;
+        }
+        p:nth-child(1) {
+            display: flex;
+            .box  {
+                padding-right: 5px;
+            }
+        }
+    }
+    &_marquee {
+        margin-top: 120px;
+        margin-bottom: 120px;
+        height: auto;
+        position: relative;
+        overflow-x: hidden;
+
+        &_imageone {
+            width: 300px;
+            height: 200px;
+            bottom: 5%;
+            left: 5%;
+            z-index: -1;
+            position: absolute;
+        
+            @include respondMax("tablet") {
+                width: 270px;
+            }
+        
+            @include respondMax("mobile") {
+                width: 200px;
+                height: 180px;
+            }
+        }
+        
+        &_imagetwo {
+            width: 230px;
+            height: 290px;
+            position: absolute;
+            top: 0;
+            right: 10%;
+            z-index: -1;
+        
+            @include respondMax("tablet") {
+                width: 320px;
+                height: 210px;
+                right: 2%;
+            }
+        
+            @include respondMax("mobile") {
+                right: -1%;
+                width: 210px;
+                height: 180px;
+            }
+        }
+
+        &_inner {
+            width: fit-content;
+            display: flex;
+            position: relative;
+            white-space: nowrap;
+
+            span {
+                font-size: 10vw;
+                font-weight: 900;
+                padding: 0 2vw;
+                margin-right: 5vw;
+                font-family: 'Fjalla One', sans-serif;
+            }
+        }
+        .first {
+            transform: translateX(80%);
+        }
+        .second {
+            transform: translateX(-80%);
+        }
+    }
+    &_content {
+        @include center (100%, 100%);
+
+        &_title {
+            text-align: center;
+        }
+        &_p {
+            letter-spacing: 1px;
+            font-size: 18px;
+            line-height: 30px;
+            margin: 20px auto;
+        }
+    }
+}
