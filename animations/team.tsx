@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
-const useAnimationThree = () => {
+const useTeamAnimation = () => {
 
     let app = useRef<HTMLDivElement>(null);
     const tl = useRef<GSAPTimeline>()
@@ -11,19 +11,19 @@ const useAnimationThree = () => {
      useEffect(() => {
 
         let ctx = gsap.context(() => {
-            ScrollTrigger.saveStyles(".first, .second");
+            ScrollTrigger.saveStyles(".teamone, .teamtwo");
 
             tl.current = gsap.timeline({
-                scrollTrigger: {trigger: ".marquee", start: "bottom bottom", scrub: 7}
+                scrollTrigger: {trigger: ".teamone", start: "top bottom",}
             })
-            .to(".first", {duration: 2, x: -300})
-            .to(".second", {duration: 2, x: 300},"<")
+            .from(".teamone", {scale:0, opacity: 0},)
+            .to(".teamone", { scale:1, x: 0, opacity: 1})
 
             tl.current = gsap.timeline({
-                scrollTrigger: {trigger: ".content", start: "top bottom"}
+                scrollTrigger: {trigger: ".teamtwo", start: "top bottom",}
             })
-            .from(".content", {y:100, opacity: 0},)
-            .to(".content", {y:0, opacity: 1},)
+            .from(".teamtwo", {scale:0, opacity: 0},)
+            .to(".teamtwo", { scale:1, x: 0, opacity: 1})
 
         }, app);
 
@@ -33,4 +33,4 @@ const useAnimationThree = () => {
     return {app}
 }
 
-export default useAnimationThree
+export default useTeamAnimation

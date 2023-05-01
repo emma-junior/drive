@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.story {
+
+    &_images {
+        display: grid;
+        grid-template-columns: repeat(3, 32%);
+        gap: 15px;
+        justify-content: center;
+
+        @include respondMax("tablet") {
+            gap: 5px;
+        }
+
+        @include respondMax("mobile") {
+            grid-template-columns: repeat(1, 98%);
+        }
+
+        &_one,
+        &_three {
+            height: 300px;
+            transition: all 2s;
+            object-fit: cover;
+
+            @include respondMax("tablet") {
+                height: 220px;
+            }
+
+            @include respondMax("mobile") {
+                height: 240px;
+                opacity: 0;
+
+            }
+        }
+
+        &_two {
+            height: 450px;
+            transition: all 2s;
+            object-fit: cover;
+
+            @include respondMax("tablet") {
+                height: 270px;
+            }
+
+            @include respondMax("mobile") {
+                height: 270px;
+                opacity: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+@mixin span() {
+    font-size: 10vw;
+    font-weight: 900;
+    padding: 0 2vw;
+    margin-right: 5vw;
+    font-family: 'Fjalla One', sans-serif;
+    @include respondMax("mobile") {
+        font-size: 25vw;
+    }
+    
+    @include respondMax("tablet") {
+        font-size: 20vw;
+    }
+}
+
+.portfolio_marquee {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    height: auto;
+    position: relative;
+    overflow-x: hidden;
+
+    &_imageone {
+        width: 300px;
+        height: 200px;
+        bottom: 5%;
+        left: 5%;
+        z-index: -1;
+        position: absolute;
+
+        @include respondMax("tablet") {
+            width: 250px;
+            height: 180px;
+        }
+
+        @include respondMax("mobile") {
+            width: 150px;
+            height: 110px;
+        }
+    }
+
+    &_imagetwo {
+        width: 230px;
+        height: 290px;
+        position: absolute;
+        top: 0;
+        right: 10%;
+        z-index: -1;
+
+        @include respondMax("tablet") {
+            width: 180px;
+            height: 210px;
+            right: 2%;
+        }
+
+        @include respondMax("mobile") {
+            width: 120px;
+            height: 150px;
+        }
+    }
+
+    //first slide
+    &_innerone {
+        width: fit-content;
+        display: flex;
+        position: relative;
+        white-space: nowrap;
+
+        span {
+            @include span();
+            animation: move 10s linear infinite;
+            @include respondMax("mobile") {
+                font-size: 25vw;
+            }
+        }
+        @keyframes move {
+            0% {
+                transform: translateX(100px);
+        
+                @include respondMax("tablet") {
+                    transform: translateX(-500px);
+                }
+            }
+        
+            50% {
+                transform: translateX(-100px);
+        
+                @include respondMax("tablet") {
+                    transform: translateX(300px);
+                }
+            }
+        
+            100% {
+                transform: translateX(100px);
+        
+                @include respondMax("tablet") {
+                    transform: translateX(-500px);
+                }
+            }
+        }
+    }
+
+    //second slide
+    &_innertwo {
+        width: fit-content;
+        display: flex;
+        position: relative;
+        white-space: nowrap;
+    
+        span {
+            @include span();
+            animation: move 10s linear infinite;
+            @include respondMax("mobile") {
+                font-size: 25vw;
+            }
+        }
+    
+        @keyframes move {
+            0% {
+                transform: translateX(-200px);
+            }
+    
+            50% {
+                transform: translateX(200px);
+            }
+    
+            100% {
+                transform: translateX(-200px);   
+            }
+        }
+    }
+
+    .first {
+        transform: translateX(80%);
+    }
+
+    .second {
+        transform: translateX(-80%);
+    }
+}

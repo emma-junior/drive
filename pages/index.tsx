@@ -3,10 +3,10 @@ import Head from 'next/head'
 import Navbar from '../components/navbar/Navbar'
 import Hero from '../components/hero/Hero'
 import Loader from "../components/loading/Loader";
-import Features from "../components/features/Features";
-import { story, team } from "../data";
 import Countries from "../components/countries/Countries";
 import Portfolio from "../components/portfolio/Portfolio";
+import Story from "../components/story/Story";
+import Team from "../components/team/Team";
 
 
 export default function Home():ReactElement {
@@ -34,9 +34,9 @@ export default function Home():ReactElement {
             <>
             <Navbar />
             <Hero />
-            <Features details={story} />
+            <Story />
             <Countries />
-            <Features details={team} />
+            <Team />
             <Portfolio />
             </>
           )
