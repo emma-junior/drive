@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from "./portfolio.module.scss"
 import Image from 'next/image'
-import useAnimationThree from '../../animations/portfolio';
 import { portfolio } from '../../data';
 import Button from '../button/Button';
 import PortfolioSlider from '../portfolioSlider';
+import usePortfolioAnimation from '../../animations/portfolio';
 
 const Portfolio = () => {
-    const { app } = useAnimationThree();
+    const { app } = usePortfolioAnimation();
   return (
     <section ref={app} className={styles.portfolio}>
         <div className={styles.portfolio_header}>

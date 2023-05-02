@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
-const useAnimationThree = () => {
+const usePortfolioAnimation = () => {
 
     let app = useRef<HTMLDivElement>(null);
     const tl = useRef<GSAPTimeline>()
@@ -33,4 +33,4 @@ const useAnimationThree = () => {
     return {app}
 }
 
-export default useAnimationThree
+export default usePortfolioAnimation

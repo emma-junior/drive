@@ -7,6 +7,8 @@ import Countries from "../components/countries/Countries";
 import Portfolio from "../components/portfolio/Portfolio";
 import Story from "../components/story/Story";
 import Team from "../components/team/Team";
+import Market from "../components/market/Market";
+import Footer from "../components/footer/Footer";
 
 
 export default function Home():ReactElement {
@@ -38,6 +40,8 @@ export default function Home():ReactElement {
             <Countries />
             <Team />
             <Portfolio />
+            <Market />
+            <Footer />
             </>
           )
         }

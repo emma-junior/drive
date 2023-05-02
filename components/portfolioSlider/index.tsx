@@ -3,7 +3,7 @@ import styles from "./slides.module.scss"
 
 const PortfolioSlider = () => {
   return (
-    <div className={styles.portfolio_marquee}>
+    <div className={`marquee ${styles.portfolio_marquee}`}>
         <figure className={styles.portfolio_marquee_imageone}>
             <img src="/images/portfolioone.jpg" alt='' />
         </figure>
