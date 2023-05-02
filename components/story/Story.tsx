@@ -7,7 +7,7 @@ import useStoryAnimation from '../../animations/story';
 const Story = () => {
     const { app } = useStoryAnimation();
   return (
-    <section ref={app} className={styles.story}>
+    <section ref={app} className={styles.story} id='story'>
         <div className={`storypics ${styles.story_images}`}>
             <figure className={`storyone ${styles.story_images_one}`}>
                 <img src="/images/storyone.jpg" alt='' />

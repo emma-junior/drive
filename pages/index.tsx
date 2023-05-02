@@ -20,6 +20,8 @@ export default function Home():ReactElement {
       setLoading(false)
     },2800)
   },[])
+
+
   return (
     <>
       <Head>

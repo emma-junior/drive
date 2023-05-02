@@ -1,10 +1,10 @@
-import React from 'react'
+import React,{ReactElement} from 'react'
 import styles from "./footer.module.scss"
 import Image from 'next/image'
 
 
 
-const Footer = () => {
+const Footer = ():ReactElement => {
   return (
     <section className={styles.footer}>
         <div className={styles.footer_subscribe}>

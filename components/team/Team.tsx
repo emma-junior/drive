@@ -7,7 +7,7 @@ import useTeamAnimation from '../../animations/team';
 const Team = () => {
     const { app } = useTeamAnimation();
   return (
-    <section ref={app} className={styles.team}>
+    <section ref={app} className={styles.team} id='team'>
         <div className={`teampics ${styles.team_images}`}>
             <figure className={`teamone ${styles.team_images_one}`}>
                 <img src="/images/teamone.jpg" alt='' />

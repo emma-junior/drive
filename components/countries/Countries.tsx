@@ -1,6 +1,7 @@
 import React,{ReactElement} from 'react'
 import styles from "./countries.module.scss"
 
+
 const Countries = ():ReactElement => {
   return (
     <section className={styles.countries}>

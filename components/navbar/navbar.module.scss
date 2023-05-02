@@ -35,9 +35,10 @@
                     cursor: pointer;
                     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
                     transition: all 1.5s;
-                    transform: translateY(-3em);
+                    transform: translateY(-3em);                   
                     @include respondMax("tablet") {
                         margin: 10px auto;
+                        text-align: center;
                     }
                 }
             }

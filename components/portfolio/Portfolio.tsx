@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ReactElement} from 'react'
 import styles from "./portfolio.module.scss"
 import Image from 'next/image'
 import { portfolio } from '../../data';
@@ -6,10 +6,10 @@ import Button from '../button/Button';
 import PortfolioSlider from '../portfolioSlider';
 import usePortfolioAnimation from '../../animations/portfolio';
 
-const Portfolio = () => {
+const Portfolio = ():ReactElement => {
     const { app } = usePortfolioAnimation();
   return (
-    <section ref={app} className={styles.portfolio}>
+    <section ref={app} className={styles.portfolio} id='portfolio'>
         <div className={styles.portfolio_header}>
             <p><Image className={styles.box} src="/svgs/box.svg" alt='' width={18} height={18} />CANDID CONVICTION</p>
             <p>We're relentless because we have to be. Entrepreneurs choose to partner with Drive because they want convicted investors who will push them to be great.</p>

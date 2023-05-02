@@ -1,9 +1,8 @@
-import React from 'react'
+import React,{ReactElement} from 'react'
 import styles from "./market.module.scss"
 import useTeamAnimation from '../../animations/team';
-import Image from 'next/image';
 
-const Market = () => {
+const Market = ():ReactElement => {
     const { app } = useTeamAnimation();
   return (
     <section ref={app} className={styles.market}>
