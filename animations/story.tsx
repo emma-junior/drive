@@ -52,7 +52,7 @@ const useStoryAnimation= () => {
 
     
         tl.current = gsap.timeline({
-            scrollTrigger: {trigger: ".features", start: "top bottom"}
+            scrollTrigger: {trigger: ".features", start: "top bottom", toggleActions: "restart none none none"}
         })
         .from(".features", {y:100, opacity: 0},)
         .to(".features", {y:0, opacity: 1},)

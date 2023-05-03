@@ -25,6 +25,13 @@ const useTeamAnimation = () => {
             .from(".teamtwo", {scale:0, opacity: 0},)
             .to(".teamtwo", { scale:1, x: 0, opacity: 1})
 
+            tl.current = gsap.timeline({
+                scrollTrigger: {trigger: ".features", start: "top bottom", toggleActions: "restart none none none"}
+            })
+            .from(".features", {y:100, opacity: 0},)
+            .to(".features", {y:0, opacity: 1},)
+
+
         }, app);
 
     return () => ctx.revert()
