@@ -8,6 +8,24 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+body::-webkit-scrollbar-track {
+    background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 20px;
+    overflow-x: none;
+}
+
 body {
     background: $col-background;
     color: $col-primary;
@@ -19,9 +37,6 @@ body {
     @include respondMax("tablet") {
         padding: 10px;
     }
-    // &::-webkit-scrollbar {
-    //     display: none;
-    // }
 }
 a {
     text-decoration: none;
