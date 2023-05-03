@@ -35,10 +35,31 @@
                 cursor: pointer;
                 clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
                 transition: all 1.5s;
-                transform: translateY(-3em);                   
+                transform: translateY(-3em);
+                position: relative;
+                display: block;
+                margin-bottom: 2px;               
                 @include respondMax("tablet") {
                     margin: 10px auto;
                     text-align: center;
+                }
+
+                &::after {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    transition: transform .5s;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    background: $col-primary;
+                }
+                &:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: left;
                 }
             }
         }
