@@ -12,8 +12,8 @@ const Portfolio = ():ReactElement => {
     <section ref={app} className={styles.portfolio} id='portfolio'>
         <div className={styles.portfolio_header}>
             <p><Image className={styles.box} src="/svgs/box.svg" alt='' width={18} height={18} />CANDID CONVICTION</p>
-            <p>We're relentless because we have to be. Entrepreneurs choose to partner with Drive because they want convicted investors who will push them to be great.</p>
-            <p>Great founders don't want cheerleaders or cheap platitudes. They want honesty about what works and what doesn't. They want the best tools available for doing their life's work.</p>
+            <p>We&apos;re relentless because we have to be. Entrepreneurs choose to partner with Drive because they want convicted investors who will push them to be great.</p>
+            <p>Great founders don&apos;t want cheerleaders or cheap platitudes. They want honesty about what works and what doesn&apos;t. They want the best tools available for doing their life&apos;s work.</p>
         </div>
         <PortfolioSlider />
         <div className={`content ${styles.portfolio_content}`}>
