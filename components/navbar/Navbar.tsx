@@ -4,7 +4,7 @@ import styles from "./navbar.module.scss"
 import useAnimation from '../../animations';
 
 const Navbar = ():ReactElement => {
-  const { app } = useAnimation();
+  // const { app } = useAnimation();
   const [click, setClick] = useState<boolean>(false);
 
   const [cursorX, setCursorX] = useState<number>()
@@ -20,7 +20,7 @@ const Navbar = ():ReactElement => {
 
   const handleClick = () => setClick(!click)
   return (
-    <nav ref={app} className={styles.navbar}>
+    <nav className={styles.navbar}>
         <Image className={` logo ${styles.navbar_logo}`} src="/svgs/logo.svg" alt='' width={150} height={60} />
         <div className={click ? styles.showSidebar : styles.navLinks}>
           <ul>

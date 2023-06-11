@@ -18,20 +18,20 @@ const useStoryAnimation= () => {
                 tl.current = gsap.timeline({
                     scrollTrigger: {trigger: ".storyone",start: "top bottom",}
                 });
-                tl.current.from(".storyone", {scale:0, opacity: 0},)
-                .to(".storyone", { scale:1, x: 0, opacity: 1})
+                tl.current.from(".storyone", { opacity: 0},)
+                .to(".storyone", {  opacity: 1, duration: .5})
 
                 tl.current = gsap.timeline({
                     scrollTrigger: {trigger: ".storytwo",start: "top bottom",}
                 });
-                tl.current.from(".storytwo", {scale:0, opacity: 0},)
-                .to(".storytwo", { scale:1, x: 0, opacity: 1})
+                tl.current.from(".storytwo", { opacity: 0},)
+                .to(".storytwo", { opacity: 1, duration: .5})
 
                 tl.current = gsap.timeline({
                     scrollTrigger: {trigger: ".storythree",start: "top bottom",}
                 });
-                tl.current.from(".storythree", {scale:0, opacity: 0},)
-                .to(".storythree", { scale:1, x: 0, opacity: 1})
+                tl.current.from(".storythree", { opacity: 0},)
+                .to(".storythree", { opacity: 1, duration: .5})
 
             },
             "(min-width: 769px)": function() {

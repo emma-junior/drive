@@ -4,15 +4,18 @@ import useAnimation from "../../animations";
 
 
 const Hero = ():ReactElement => {
-  const { app } = useAnimation();
+  // const { app } = useAnimation();
   
   return (
-    <section ref={app}  className={styles.hero}>
+    <section   className={styles.hero}>
         <div className={styles.hero_text}>
           <div className={`text ${styles.hero_text_p}`}>GREATNESS&nbsp;IS&nbsp;IN&nbsp;OUR&nbsp;BACKYARD</div>
         </div>
-        <div className={`drive ${styles.hero_drive}`}><p >DRIVE</p></div>
-        <div className={styles.hero_slides}>
+        
+        <figure className={`drive ${styles.hero_drive}`} >
+          <img src="/images/drive.png" alt="" />
+        </figure>
+        <div className={`heroSlide ${styles.hero_slides}`}>
           <div className={styles.hero_slides_wrapper}>
             {(() => {
                 const arr = [];

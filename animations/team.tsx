@@ -16,14 +16,14 @@ const useTeamAnimation = () => {
             tl.current = gsap.timeline({
                 scrollTrigger: {trigger: ".teamone", start: "top bottom",}
             })
-            .from(".teamone", {scale:0, opacity: 0},)
-            .to(".teamone", { scale:1, x: 0, opacity: 1})
+            .from(".teamone", { opacity: 0},)
+            .to(".teamone", { opacity: 1, duration: 1})
 
             tl.current = gsap.timeline({
                 scrollTrigger: {trigger: ".teamtwo", start: "top bottom",}
             })
-            .from(".teamtwo", {scale:0, opacity: 0},)
-            .to(".teamtwo", { scale:1, x: 0, opacity: 1})
+            .from(".teamtwo", { opacity: 0},)
+            .to(".teamtwo", {  opacity: 1, duration: 1})
 
             tl.current = gsap.timeline({
                 scrollTrigger: {trigger: ".features", start: "top bottom", toggleActions: "restart none none none"}

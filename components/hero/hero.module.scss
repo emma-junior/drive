@@ -2,13 +2,13 @@
 @import "../../styles/variables";
 
 .hero {
-    padding-top: 60px;
+    padding-top: 40px;
     @include respondMax("tablet") {
-        padding-top: 70px;
+        padding-top: 50px;
     }
     &_text {
         width: 95%;
-        margin: 0 auto;
+        margin: 25px 0;
         &_p {
             width: 600px;
             font-size: 40px;
@@ -27,37 +27,46 @@
             }
         }
     }
-    &_drive {        
-        background-image: url(/images/city.jpg);
-        background-size: cover;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        padding-top: 70px;
-        overflow: hidden;
-        clip-path: polygon(0 0, 51% 0, 100% 0);
-        @include center (95%, 100%);
+    &_drive {
+        width: 100%;
+        height: 500px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         @include respondMax("tablet") {
-            @include center (100%, 300px);
+            height: 500px;
         }
         @include respondMax("mobile") {
-            @include center (100%, 190px);
+            height: 300px;
         }
+        // background-image: url(/images/city.jpg);
+        // background-size: cover;
+        // background-clip: text;
+        // -webkit-background-clip: text;
+        // color: transparent;
+        // padding-top: 70px;
+        // overflow: hidden;
+        // clip-path: polygon(0 0, 51% 0, 100% 0);
+        // @include center (95%, 100%);
+        // @include respondMax("tablet") {
+        //     @include center (100%, 300px);
+        // }
+        // @include respondMax("mobile") {
+        //     @include center (100%, 190px);
+        // }
 
-        p {
-            font-size: 700px;
-            font-weight: 700;
-            font-family: 'Bebas Neue', cursive;
-            line-height: 70%;
-            @include respondMax("tablet") {
-                font-size: 370px;
-            }
-            @include respondMax("mobile"){
-                font-size: 190px;
-                line-height: 40%;
+        // p {
+        //     font-size: 700px;
+        //     font-weight: 700;
+        //     font-family: 'Bebas Neue', cursive;
+        //     line-height: 70%;
+        //     @include respondMax("tablet") {
+        //         font-size: 370px;
+        //     }
+        //     @include respondMax("mobile"){
+        //         font-size: 190px;
+        //         line-height: 40%;
 
-            }
-        }
+        //     }
+        // }
     }
     &_slides {
         display: block;
@@ -89,5 +98,6 @@
                 letter-spacing: 1px;
             }
         }
+        
     }
 }

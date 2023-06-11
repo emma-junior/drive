@@ -9,7 +9,8 @@
 }
 
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
+    background: #0A0A0B;
 }
 
 body::-webkit-scrollbar:horizontal {
@@ -27,16 +28,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-    background: $col-background;
+    background: inherit;
     color: $col-primary;
-    padding: 25px;
     margin: 0;
     overflow-x: hidden;
     width: 100%;
     min-height: 100%;
-    @include respondMax("tablet") {
-        padding: 10px;
-    }
 }
 .cursor {
     position: absolute;
@@ -80,4 +77,69 @@ figure {
         min-height: 100%;
         max-height: 100%;
     }
+}
+
+
+//preloader
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace.pace-inactive .pace-progress {
+    display: none;
+}
+
+.pace .pace-progress {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    height: 5rem;
+    width: 5rem;
+
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -ms-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+}
+
+.pace .pace-progress:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: .5rem;
+    content: attr(data-progress-text);
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 100;
+    font-size: 5rem;
+    line-height: 1;
+    text-align: right;
+    color: $col-primary;
+}
+
+.loading__text {
+    letter-spacing: 25px;
+    font-weight: 700;
+    position: relative;
+    top: -50px;
+    pointer-events: none;
+    user-select: none;
+    color: $col-primary;
+}
+.app {
+    position: relative;
+    z-index: 30;
+    padding: 25px;
+    opacity: 0;
+
+    @include respondMax("mobile") {
+        padding: 15px;
+    }
+}
+.heroSlide {
+    clip-path: polygon(0 0, 51% 0, 100% 0);
 }
