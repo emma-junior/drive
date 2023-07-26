@@ -1,3 +1,5 @@
+@import "./styles/mixins";
+
 * {
     margin: 0;
     padding: 0;
@@ -119,6 +121,9 @@ figure {
     line-height: 1;
     text-align: right;
     color: $col-primary;
+    @include respondMax("mobile") { 
+        font-size: 3rem;
+    }
 }
 
 .loading__text {
