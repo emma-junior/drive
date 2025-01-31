@@ -1,7 +1,9 @@
 import React, { createContext, useEffect, useState } from "react";
 
 export const SmoothScrollContext = createContext({
-  scroll: null,
+  scroll: {
+    scrollTo: ({}) => {},
+  },
 });
 
 export const SmoothScrollProvider = ({ children, options }) => {

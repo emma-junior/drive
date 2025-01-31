@@ -15,6 +15,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "animations/preloader.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "animations/preloader.js",
+    "hooks/SmoothScroll.context.js"
+  ],
   "exclude": ["node_modules"]
 }

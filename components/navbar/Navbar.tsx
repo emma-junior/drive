@@ -1,14 +1,38 @@
-import React, { ReactElement, useState, useEffect } from "react";
+import React, { ReactElement, useState, useEffect, useContext } from "react";
 import Image from "next/image";
 import styles from "./navbar.module.scss";
-import useAnimation from "../../animations";
+import { SmoothScrollContext } from "../../hooks/SmoothScroll.context";
 
 const Navbar = (): ReactElement => {
-  // const { app } = useAnimation();
   const [click, setClick] = useState<boolean>(false);
 
   const [cursorX, setCursorX] = useState<number>();
   const [cursorY, setCursorY] = useState<number>();
+
+  const { scroll } = useContext(SmoothScrollContext);
+
+  const goToStorySection = (event: any) => {
+    event.preventDefault();
+    scroll && scroll?.scrollTo("#story");
+    setClick(!click);
+  };
+
+  const goToTeamSection = (event: any) => {
+    event.preventDefault();
+    scroll && scroll?.scrollTo("#team");
+    setClick(!click);
+  };
+
+  const goToPortfolioSection = (event: any) => {
+    event.preventDefault();
+    scroll && scroll?.scrollTo("#portfolio");
+    setClick(!click);
+  };
+
+  const goToTop = (event: any) => {
+    event.preventDefault();
+    scroll && scroll.scrollTo(0);
+  };
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -35,16 +59,16 @@ const Navbar = (): ReactElement => {
       />
       <div className={click ? styles.showSidebar : styles.navLinks}>
         <ul>
-          <li className="menuitem" onClick={handleClick}>
+          <li className="menuitem" onClick={goToStorySection}>
             <a href="#story">STORY</a>
           </li>
-          <li className="menuitem" onClick={handleClick}>
+          <li className="menuitem" onClick={goToTeamSection}>
             <a href="#team">TEAM</a>
           </li>
-          <li className="menuitem" onClick={handleClick}>
+          <li className="menuitem" onClick={goToPortfolioSection}>
             <a href="#portfolio">PORTFOLIO</a>
           </li>
-          <li className="menuitem" onClick={handleClick}>
+          <li className="menuitem" onClick={goToTop}>
             <a href="#">TALENT</a>
           </li>
           <div
