@@ -18,6 +18,7 @@
 
     @include respondMax("mobile") {
       grid-template-columns: auto;
+      width: 90%;
     }
     p:nth-child(1) {
       display: flex;
@@ -46,6 +47,9 @@
       width: 90%;
       @include respondMax("tablet") {
         width: 95%;
+      }
+      @include respondMax("mobile") {
+        width: 90%;
       }
     }
   }

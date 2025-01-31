@@ -9,6 +9,10 @@
   &_text {
     width: 95%;
     margin: 25px auto;
+    @include respondMax("mobile") {
+      width: 90%;
+    }
+
     &_p {
       width: 600px;
       font-size: 40px;
@@ -37,6 +41,7 @@
     }
     @include respondMax("mobile") {
       height: 300px;
+      width: 90%;
     }
     // background-image: url(/images/city.jpg);
     // background-size: cover;

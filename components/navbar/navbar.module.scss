@@ -6,6 +6,9 @@
   justify-content: space-between;
   width: 95%;
   margin-inline: auto;
+  @include respondMax("mobile") {
+    width: 90%;
+  }
   &_logo {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: all 1.5s;

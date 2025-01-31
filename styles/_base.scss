@@ -105,9 +105,9 @@ figure {
   padding: 25px 0 0;
   opacity: 0;
 
-  @include respondMax("mobile") {
-    padding: 15px;
-  }
+  // @include respondMax("mobile") {
+  //   padding: 15px;
+  // }
 }
 .heroSlide {
   clip-path: polygon(0 0, 51% 0, 100% 0);

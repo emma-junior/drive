@@ -4,6 +4,9 @@
 .story {
   width: 95%;
   margin-inline: auto;
+  @include respondMax("mobile") {
+    width: 90%;
+  }
   &_images {
     display: grid;
     grid-template-columns: repeat(3, 32%);

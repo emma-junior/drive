@@ -4,6 +4,9 @@
 .team {
   width: 95%;
   margin-inline: auto;
+  @include respondMax("mobile") {
+    width: 90%;
+  }
   &_images {
     display: flex;
     justify-content: space-between;
@@ -24,6 +27,9 @@
       width: 65%;
       height: 550px;
       transition: all 2s;
+      @include respondMax("tablet") {
+        height: 450px;
+      }
       @include respondMax("mobile") {
         width: 100%;
         height: 270px;
