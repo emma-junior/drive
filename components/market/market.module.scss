@@ -2,64 +2,67 @@
 @import "../../styles/mixins";
 
 .market {
-    margin: 10px auto;
-    overflow: hidden;
-    &_images {
-        display: flex;
-        justify-content: space-between;
-    
-        @include respondMax("mobile") {
-            flex-direction: column;
-        }
-    
-        &_one {
-            width: 32%;
-            height: 290px;
-            transition: all 2s;
-            border-top: 2px solid $col-primary;
-            padding-top: 20px;
-            @include respondMax("mobile") {
-                width: 100%;
-                height: 270px;
-                padding-top: 10px;
-                border: none;
-            }
-        }
-    
-        &_two {
-            width: 65%;
-            height: 470px;
-            transition: all 2s;
-            border-top: 2px solid $col-primary;
-            padding-top: 20px;
-            @include respondMax("mobile") {
-                width: 100%;
-                height: 270px;
-                border: none;
-            }
-        }
-    }
-    &_pattern {
-        display: flex;
-        justify-content: flex-end;
-        
+  margin: 10px auto;
+  overflow: hidden;
+  &_images {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin-inline: auto;
 
-        &_image {
-            width: 700px;
-            height: 450px;
-        } 
+    @include respondMax("mobile") {
+      flex-direction: column;
     }
-    &_topic {
-        width: 400px;
-        margin-top: -100px;
 
-        h1 {
-            font-size: 40px;
-            letter-spacing: 1px;
-            @include respondMax("mobile") {
-                font-size: 25px;
-                width: 90%;
-            }
-        }
+    &_one {
+      width: 32%;
+      height: 290px;
+      transition: all 2s;
+      border-top: 2px solid $col-primary;
+      padding-top: 20px;
+      @include respondMax("mobile") {
+        width: 100%;
+        height: 270px;
+        padding-top: 10px;
+        border: none;
+      }
     }
+
+    &_two {
+      width: 65%;
+      height: 550px;
+      transition: all 2s;
+      border-top: 2px solid $col-primary;
+      padding-top: 20px;
+      @include respondMax("mobile") {
+        width: 100%;
+        height: 270px;
+        border: none;
+      }
+    }
+  }
+  &_pattern {
+    display: flex;
+    justify-content: flex-end;
+
+    &_image {
+      width: 700px;
+      height: 450px;
+    }
+  }
+  &_topic {
+    margin-top: -100px;
+    width: 95%;
+    margin-inline: auto;
+
+    h1 {
+      font-size: 40px;
+      letter-spacing: 1px;
+      width: 400px;
+      @include respondMax("mobile") {
+        font-size: 25px;
+        width: 90%;
+      }
+    }
+  }
 }

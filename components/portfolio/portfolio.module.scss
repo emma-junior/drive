@@ -2,49 +2,51 @@
 @import "../../styles/mixins";
 
 .portfolio {
-    padding: 20px 0;   
+  padding: 20px 0;
 
-    &_header {
-        display: grid;
-        grid-template-columns: repeat(3, 32%);
-        gap: 15px;
-        letter-spacing: 1px;
-        
-        @include respondMax("tablet") {
-            gap: 5px;
-        }
-        
-        @include respondMax("mobile") {
-            grid-template-columns: auto;
-        }
-        p:nth-child(1) {
-            display: flex;
-            .box  {
-                padding-right: 5px;
-            }
-        }
-        p:nth-child(2) {
-            @include respondMax("mobile") {
-                padding: 7px 0;
-            }
-        }
+  &_header {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    gap: 15px;
+    letter-spacing: 1px;
+    width: 95%;
+    margin-inline: auto;
+
+    @include respondMax("tablet") {
+      gap: 5px;
     }
-    
-    &_content {
-        @include center (100%, 100%);
-        transition: all 1.5s;
-        &_title {
-            text-align: center;
-        }
-        &_p {
-            letter-spacing: 1px;
-            font-size: 18px;
-            line-height: 30px;
-            margin: 20px 0;
-            width: 90%;
-            @include respondMax("tablet") {
-                width: 95%;
-            }
-        }
+
+    @include respondMax("mobile") {
+      grid-template-columns: auto;
     }
+    p:nth-child(1) {
+      display: flex;
+      .box {
+        padding-right: 5px;
+      }
+    }
+    p:nth-child(2) {
+      @include respondMax("mobile") {
+        padding: 7px 0;
+      }
+    }
+  }
+
+  &_content {
+    @include center(100%, 100%);
+    transition: all 1.5s;
+    &_title {
+      text-align: center;
+    }
+    &_p {
+      letter-spacing: 1px;
+      font-size: 18px;
+      line-height: 30px;
+      margin: 20px 0;
+      width: 90%;
+      @include respondMax("tablet") {
+        width: 95%;
+      }
+    }
+  }
 }

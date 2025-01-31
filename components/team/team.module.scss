@@ -2,31 +2,33 @@
 @import "../../styles/mixins";
 
 .team {
-    &_images {
-        display: flex;
-        justify-content: space-between;
-        @include respondMax("mobile") {
-            flex-direction: column;
-        }
-        &_one {
-            width: 32%;
-            height: 270px;
-            transition: all 2s;
-            @include respondMax("mobile") {
-                width: 100%;
-                height: 270px;
-                padding: 5px 0;
-            }
-        }
-        &_two {
-            width: 65%;
-            height: 450px;
-            transition: all 2s;
-            @include respondMax("mobile") {
-                width: 100%;
-                height: 270px;
-                padding: 5px 0;
-            }
-        }
+  width: 95%;
+  margin-inline: auto;
+  &_images {
+    display: flex;
+    justify-content: space-between;
+    @include respondMax("mobile") {
+      flex-direction: column;
     }
+    &_one {
+      width: 32%;
+      height: 270px;
+      transition: all 2s;
+      @include respondMax("mobile") {
+        width: 100%;
+        height: 270px;
+        padding: 5px 0;
+      }
+    }
+    &_two {
+      width: 65%;
+      height: 550px;
+      transition: all 2s;
+      @include respondMax("mobile") {
+        width: 100%;
+        height: 270px;
+        padding: 5px 0;
+      }
+    }
+  }
 }

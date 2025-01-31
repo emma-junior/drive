@@ -1,7 +1,7 @@
-import React, { ReactElement } from "react";
-import Head from 'next/head'
-import Navbar from '../components/navbar/Navbar'
-import Hero from '../components/hero/Hero'
+import React, { ReactElement, useRef, useEffect } from "react";
+import Head from "next/head";
+import Navbar from "../components/navbar/Navbar";
+import Hero from "../components/hero/Hero";
 import Countries from "../components/countries/Countries";
 import Portfolio from "../components/portfolio/Portfolio";
 import Story from "../components/story/Story";
@@ -9,12 +9,10 @@ import Team from "../components/team/Team";
 import Market from "../components/market/Market";
 import Footer from "../components/footer/Footer";
 import Preloader from "../components/preloader/Preloader";
+import Contact from "../components/contact/Contact";
+import { SmoothScrollProvider } from "../hooks/SmoothScroll.context";
 
-
-
-export default function Home():ReactElement {
-
-
+export default function Home(): ReactElement {
   return (
     <>
       <Head>
@@ -24,9 +22,10 @@ export default function Home():ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-            <>
-            <Preloader />
-            <div className="app">
+        <>
+          <Preloader />
+          <div className="app">
+            <SmoothScrollProvider options={{ smooth: true }}>
               <Navbar />
               <Hero />
               <Story />
@@ -35,9 +34,11 @@ export default function Home():ReactElement {
               <Portfolio />
               <Market />
               <Footer />
-            </div>
-            </>
+              <Contact />
+            </SmoothScrollProvider>
+          </div>
+        </>
       </main>
     </>
-  )
+  );
 }

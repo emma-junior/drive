@@ -2,63 +2,65 @@
 @import "../../styles/mixins";
 
 .footer {
-    padding: 20px 0;
-    display: flex;
-    font-size: 15px;
+  padding: 20px 0 50px;
+  display: flex;
+  font-size: 15px;
+  width: 95%;
+  margin-inline: auto;
+  @include respondMax("mobile") {
+    flex-direction: column;
+  }
+  &_subscribe {
+    width: 45%;
     @include respondMax("mobile") {
-        flex-direction: column;
+      width: 95%;
     }
-    &_subscribe {
-        width: 45%;
+    &_inputwrapper {
+      padding: 10px 0;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      input {
+        border: 2px solid $col-primary;
+        background: transparent;
+        width: 92%;
         @include respondMax("mobile") {
-            width: 95%;
+          width: 85%;
         }
-        &_inputwrapper {
-            padding: 10px 0;
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
+        border-radius: 20px;
+        color: $col-primary;
+        text-indent: 1rem;
+      }
 
-            input {
-                border: 2px solid $col-primary;
-                background: transparent;
-                width: 92%;
-                @include respondMax("mobile") {
-                    width: 85%;
-                }
-                border-radius: 20px;
-                color: $col-primary;
-                text-indent: 1rem;
-            }
-
-            &_arrow {
-                @include center (35px, 35px);
-                border: 2px solid $col-primary;
-                border-radius: 50%;
-                cursor: pointer;
-            }
-        }
+      &_arrow {
+        @include center(35px, 35px);
+        border: 2px solid $col-primary;
+        border-radius: 50%;
+        cursor: pointer;
+      }
     }
-    &_links {
-        display: grid;
-        grid-template-columns: repeat(3, 270px);
-        @include respondMax("tablet") {
-            grid-template-columns: repeat(3, 150px);
-        }
-        @include respondMax("mobile") {
-            grid-template-columns: repeat(3, 110px);        
-        }
-        ul {
-            margin: 0 auto;
-
-            li {
-                padding: 3px 0;
-                cursor: pointer;
-            }
-        }
-        &_logo {
-            display: flex;
-            justify-content: flex-end;
-        }
+  }
+  &_links {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    @include respondMax("tablet") {
+      grid-template-columns: repeat(3, 150px);
     }
+    @include respondMax("mobile") {
+      grid-template-columns: repeat(3, 110px);
+    }
+    ul {
+      margin: 0 auto;
+
+      li {
+        margin: 8px 0;
+        cursor: pointer;
+      }
+    }
+    &_logo {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
 }

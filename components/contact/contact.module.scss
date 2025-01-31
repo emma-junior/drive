@@ -1,0 +1,37 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.contact {
+  background: $col-white;
+  color: $col-dark;
+  border-radius: 40% 40% 0 0;
+  display: flex;
+  justify-content: center;
+
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    padding: 50px 0 50px;
+
+    &_socials {
+      display: flex;
+      &_link {
+        border: 1px solid $col-dark;
+        border-radius: 50%;
+        margin-inline: 6px;
+        @include center(40px, 40px);
+        cursor: pointer;
+
+        &:hover {
+          background: $col-secondary;
+          border: none;
+        }
+      }
+    }
+
+    &_address {
+      font-weight: 300;
+    }
+  }
+}
