@@ -2,89 +2,91 @@
 @import "../../styles/mixins";
 
 .countries {
-    padding: 70px 0;
-    position: relative;
-    &_imageone {
-        width: 300px;
-        height: 240px;
-        top: 8%;
-        left: 20px;
-        z-index: -1;
-        position: absolute;
-        @include respondMax("tablet") {
-            width: 270px;
-        }
-        @include respondMax("mobile") {
-            left: -5%;
-            width: 200px;
-            height: 180px;
-        }
+  padding: 70px 0;
+  position: relative;
+  &_imageone {
+    width: 300px;
+    height: 240px;
+    top: 8%;
+    left: 20px;
+    z-index: -1;
+    position: absolute;
+    will-change: transform;
+    @include respondMax("tablet") {
+      width: 270px;
     }
-    &_imagetwo {
-        width: 350px;
-        height: 240px;
-        position: absolute;
-        top: 50%;
-        right: 12%;
-        z-index: -1;
-        @include respondMax("tablet") {
-            width: 320px;
-            height: 210px;
-            right: 2%;
-        }
-        @include respondMax("mobile") {
-            right: -1%;
-            width: 210px;
-            height: 180px;
-        }
+    @include respondMax("mobile") {
+      left: -5%;
+      width: 200px;
+      height: 180px;
     }
-    &_container {
-        @include center (100%, 100%);
+  }
+  &_imagetwo {
+    width: 350px;
+    height: 240px;
+    position: absolute;
+    top: 50%;
+    right: 12%;
+    z-index: -1;
+    will-change: transform;
+    @include respondMax("tablet") {
+      width: 320px;
+      height: 210px;
+      right: 2%;
+    }
+    @include respondMax("mobile") {
+      right: -1%;
+      width: 210px;
+      height: 180px;
+    }
+  }
+  &_container {
+    @include center(100%, 100%);
 
-        h1 {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 90px;
-            font-weight: 700;
-            line-height: 80px;
-        }
-        &_slide {
-            background: $col-secondary;
-            @include center (100%, 100px);
-            width: 100vw;
-            overflow: hidden;
-            position: relative;
-            @include respondMax("tablet") {               
-                white-space: nowrap;
-            }
-            h1 {
-                font-size: 100px;
-                animation: move 10s linear infinite;
-            }
-            @keyframes move {
-                0% {
-                    transform: translateX(100px);
-                    @include respondMax("tablet") {
-                        transform: translateX(-500px);
-                    }
-                }
-        
-                50% {
-                    transform: translateX(-100px);
-                    @include respondMax("tablet") {
-                        transform: translateX(300px);
-                    }
-                }
-        
-                100% {
-                    transform: translateX(100px);
-                    @include respondMax("tablet") {
-                        transform: translateX(-500px);
-                    }
-                }
-            }
-        }
-        &_more {
-            color: $col-secondary;
-        }
+    h1 {
+      font-family: "Bebas Neue", cursive;
+      font-size: 90px;
+      font-weight: 700;
+      line-height: 80px;
     }
+    &_slide {
+      background: $col-secondary;
+      @include center(100%, 100px);
+      width: 100vw;
+      overflow: hidden;
+      position: relative;
+      @include respondMax("tablet") {
+        white-space: nowrap;
+      }
+      h1 {
+        font-size: 100px;
+        animation: move 10s linear infinite;
+      }
+      @keyframes move {
+        0% {
+          transform: translateX(100px);
+          @include respondMax("tablet") {
+            transform: translateX(-500px);
+          }
+        }
+
+        50% {
+          transform: translateX(-100px);
+          @include respondMax("tablet") {
+            transform: translateX(300px);
+          }
+        }
+
+        100% {
+          transform: translateX(100px);
+          @include respondMax("tablet") {
+            transform: translateX(-500px);
+          }
+        }
+      }
+    }
+    &_more {
+      color: $col-secondary;
+    }
+  }
 }

@@ -9,7 +9,7 @@ const usePortfolioAnimation = () => {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      ScrollTrigger.saveStyles(".first, .second");
+      //   ScrollTrigger.saveStyles(".first, .second");
 
       tl.current = gsap
         .timeline({
@@ -21,6 +21,23 @@ const usePortfolioAnimation = () => {
         })
         .to(".first", { duration: 2, x: -300 })
         .to(".second", { duration: 2, x: 300 }, "<");
+
+      tl.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".marquee",
+            start: "top 95%",
+            end: "bottom 5%",
+            toggleActions: "restart none none reverse",
+            scrub: 0.5,
+          },
+          defaults: {
+            duration: 2,
+            ease: "linear",
+          },
+        })
+        .from(".portfolio_imageone", { y: -70 })
+        .from(".portfolio_imagetwo", { y: 100 }, 0);
 
       tl.current = gsap
         .timeline({
